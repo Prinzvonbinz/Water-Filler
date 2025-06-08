@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Filler</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game">
+    <h1>💧 Water Filler</h1>
+
+    <div class="stats">
+      <p>Gesamt: <span id="totalLiters">0.00</span> L</p>
+      <p>Münzen: <span id="coins">0</span></p>
+    </div>
+
+    <div id="glassContainer"></div>
+
+    <button id="fillButton">Gedrückt halten zum Füllen</button>
+
+    <div class="shop">
+      <h2>🛒 Shop</h2>
+      <div class="shop-section">
+        <h3>Wasserhahn-Upgrades</h3>
+        <button onclick="buyHose()">🚿 Wasserhahn Lv. <span id="hoseLevel">0</span> (Kosten: <span id="hoseCost">10</span>)</button>
+      </div>
+
+      <div class="shop-section">
+        <h3>Neue Gläser</h3>
+        <button onclick="buyGlass()">➕ Neues Glas (Kosten: <span id="glassCost">50</span>)</button>
+      </div>
+
+      <div class="shop-section">
+        <h3>Automation</h3>
+        <button onclick="buyCollector()">🤖 Sammler Lv. <span id="collectorLevel">0</span> (Kosten: <span id="collectorCost">100</span>)</button>
+        <button onclick="buyChanger()">🔁 Glaswechsler Lv. <span id="changerLevel">0</span> (Kosten: <span id="changerCost">200</span>)</button>
+      </div>
+
+      <div class="shop-section">
+        <h3>Wasserqualität</h3>
+        <button onclick="upgradeWater()">🌊 Wasserqualität: <span id="waterType">Klar</span> (Kosten: <span id="waterCost">150</span>)</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
